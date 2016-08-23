@@ -68,12 +68,14 @@
 				return;
 			}
 
-			// prevent link on first touch
 			var $eventTarget = $( event.target );
-			if ( ( $eventTarget.is( 'a' ) || $eventTarget.closest( 'a' ).length ) &&
-			     !$eventTarget.is( widget.$popper ) &&
-			     !$.contains( widget.$popper[ 0 ], $eventTarget[ 0 ] ) ) {
-				event.preventDefault();
+
+			// prevent default behavior on links clicked
+			if ( event.type === 'click' && ( $eventTarget.is( 'a' ) || $eventTarget.closest( 'a' ).length ) ) {
+				// but only if the link is neither the popper itselt nor contained in the popper
+				if ( !$eventTarget.is( widget.$popper ) && !$.contains( widget.$popper[ 0 ], $eventTarget[ 0 ] ) ) {
+					event.preventDefault();
+				}
 			}
 
 			if ( !widget.$trigger.has( event.target ).length &&
@@ -81,6 +83,7 @@
 			     !widget.$popper.has( event.target ).length &&
 			     !$.contains( widget.$popper.get( 0 ), event.target ) ) {
 				widget.close();
+				event.stopImmediatePropagation();
 			}
 		},
 
