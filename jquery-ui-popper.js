@@ -125,7 +125,7 @@
 			$.each( $elementsToClose, function() {
 				var $elementToClose = $( this );
 
-				if ( $elementToClose[ widget.widgetName ] && $elementToClose[ widget.widgetName ]( 'isOpen' ) ) {
+				if ( $elementToClose.data( widget.widgetName ) && $elementToClose[ widget.widgetName ]( 'isOpen' ) ) {
 					$elementToClose[ widget.widgetName ]( 'close' );
 				}
 			} );
