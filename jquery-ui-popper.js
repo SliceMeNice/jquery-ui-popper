@@ -6,6 +6,7 @@
  *  Requires UI version 1.9+
  */
 ( function ( $, window, document, undefined ) {
+	'use strict';
 
 	$.widget( 'smn.popper', {
 		// *********
@@ -112,8 +113,7 @@
 
 		open: function( options ) {
 			var widget = this;
-
-			$elementsToClose = [];
+			var $elementsToClose = [];
 
 			switch ( widget.options.autoClose ) {
 				case 'group':
