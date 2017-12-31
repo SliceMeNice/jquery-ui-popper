@@ -2,13 +2,16 @@
 
 ## Release History
 
+__1.0.5__
+  * Added package.json file.
+
 __1.0.4__
 
   * Added missing var before $elementsToClose.
 
 __1.0.3__
 
-  * Fixed "prevent default" on link elements. 
+  * Fixed "prevent default" on link elements.
 
 __1.0.2__
 

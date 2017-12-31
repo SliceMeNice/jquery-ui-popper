@@ -1,0 +1,24 @@
+{
+	"name": "@slicemenice/jquery-ui-popper",
+	"version": "1.0.5",
+	"description": "A jQuery UI widget based component that simplifies opening and closing anything that pops up like subnavigations, toolstips, etc.",
+	"keywords": [
+		"jQuery UI",
+		"popup",
+		"tooltip"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:SliceMeNice/jquery-ui-popper.git"
+	},
+	"bugs": {
+		"url": "https://github.com/SliceMeNice/jquery-ui-popper/issues"
+	},
+	"homepage": "https://github.com/SliceMeNice/jquery-ui-popper",
+	"contributors": [{
+		"name": "Stefan Ullinger",
+		"email": "stefan@slicemenice.de"
+	}],
+	"author": "SliceMeNice",
+	"license": "MIT"
+}
